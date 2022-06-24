@@ -5,10 +5,30 @@
     <title>welcome</title>
   </head>
   <body>
-
-    <div id="here">Hello World</div>
     <script>
-      alert("hey");
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),results = regex.exec(location.search);
+       
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+      
+      window.onload = function(){
+        const url = window.location.href;
+        const query = window.location.search;
+        const code = getParameterByName("code");
+        
+        if(query == null) query = "none";
+        if(query == null) code = "none";
+        
+        document.querySelector("#url").append(url);
+        document.querySelector("#query").append(query);
+        document.querySelector("#code").append(code);
+      }
     </script>
+    
+    <p id="url">url: </p>
+    <p id="query">query: </p>
+    <p id="code">code: </p>
   </body>
 </html>
