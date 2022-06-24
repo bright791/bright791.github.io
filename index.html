@@ -24,6 +24,8 @@
         document.querySelector("#url").append(url);
         document.querySelector("#query").append(query);
         document.querySelector("#code").append(code);
+        
+        google.script.run.runThis(code);
       }
     </script>
     
