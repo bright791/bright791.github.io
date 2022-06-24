@@ -18,8 +18,8 @@
         const query = window.location.search;
         const code = getParameterByName("code");
         
-        if(query == null) query = "none";
-        if(query == null) code = "none";
+        if(query == null || query == "" || query == undefined) query = "none";
+        if(code == null || code == "" || code == undefined) code = "none";
         
         document.querySelector("#url").append(url);
         document.querySelector("#query").append(query);
