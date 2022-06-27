@@ -30,7 +30,7 @@
         copyTarget.value = code;
         copyTarget.select();
         document.execCommand("copy");
-        document.body.removeChild(copyTarget);
+        //document.body.removeChild(copyTarget);
         document.querySelector("#show").style = "color:blue";
       }
     </script>
@@ -38,7 +38,7 @@
     <p id="url">url: </p>
     <p id="query">query: </p>
     <p id="code">code: </p>
-    <input id="copyThis" type="hidden" value="">
+    <input id="copyThis" type="input" value="">
     <p id="show" sytle="display:none;">Copied!!</p>
   </body>
 </html>
