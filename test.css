@@ -1,0 +1,44 @@
+:root{
+  --size: 300px;
+  --size-half: 150px;
+}
+body{
+  margin: 0;
+}
+canvas{
+  position: absolute;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+}
+#canvas{
+  background-color: rgb(0,230,100);
+}
+canvas.puzzle{
+  width: 0px;
+  height: 0px;
+  border-top: 150px solid red;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 150px solid transparent;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+
+#area{
+  position: absolute;
+  width:var(--size);
+  height:var(--size);
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%,-50%);
+}
+
+canvas:hover{
+  cursor:grab;
+  cursor-size:
+}
+
+canvas:active{
+  cursor:grabbing;
+}
