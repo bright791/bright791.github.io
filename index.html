@@ -16,7 +16,7 @@
       function copyCode(codeInput){
         document.querySelector("#code").select();
         document.execCommand("copy");
-        document.querySelector("#show").style = "color:red";
+        document.querySelector("#show").style = "color:blue";
       }
       
       window.onload = function(){
@@ -32,10 +32,6 @@
         
         document.querySelector("#code").value = code;
         document.querySelector("#code").select();
-        
-        //code 클립보드 복사
-        document.execCommand("copy");
-        document.querySelector("#show").style = "color:blue";
       }
     </script>
     
