@@ -14,7 +14,7 @@
       }
       
       function copyCode(codeInput){
-        codeInput.select();
+        document.querySelector("#code").select();
         document.execCommand("copy");
         document.querySelector("#show").style = "color:red";
       }
@@ -29,8 +29,9 @@
         
         document.querySelector("#url").append(url);
         document.querySelector("#query").append(query);
-        let code = document.querySelector("#code");
-        code.value = code;
+        
+        document.querySelector("#code").value = code;
+        document.querySelector("#code").select();
         
         //code 클립보드 복사
         document.execCommand("copy");
@@ -42,7 +43,7 @@
     <p id="query">query: </p>
     <div style="color:red;font-weight: bold;">code:</div>
     <input id="code" type="input" style="width:80%" value="">
-    <input type="button" onclick="copyCode(this)">
+    <input type="button" onclick="copyCode(this)" value="Copy">
     <p id="show" style="display:none;">Copied!!</p>
   </body>
 </html>
