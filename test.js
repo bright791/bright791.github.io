@@ -2,19 +2,19 @@ window.onload = function(event){
   var pzl = document.querySelector("canvas.puzzle");
   var alert = document.querySelector("div.console");
   
-  pzl.addEventListener("mousemove", function(e){
+  pzl.addEventListener("touchmove", function(e){
     document.querySelector("div.console").innerText = "x: " + e.pageX +"\ny: " + e.pageY;
     
   });
 
   var start,end,gap;
   var startX,endX,startY,endY;
-  pzl.addEventListener("mousedown", function(e){
+  pzl.addEventListener("touchstart", function(e){
     start = new Date().getTime();
     startX = e.pageX;
     startY = e.pageY;
 
-    window.addEventListener("mouseup", function(e){
+    window.addEventListener("touchend", function(e){
       end = new Date().getTime();
       endX = e.pageX;
       endY = e.pageY;
