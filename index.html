@@ -13,6 +13,12 @@
         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
       }
       
+      function copyCode(codeInput){
+        codeInput.select();
+        document.execCommand("copy");
+        document.querySelector("#show").style = "color:red";
+      }
+      
       window.onload = function(){
         const url = window.location.href;
         let query = window.location.search;
@@ -23,22 +29,19 @@
         
         document.querySelector("#url").append(url);
         document.querySelector("#query").append(query);
-        document.querySelector("#code").append(code);
+        const code = document.querySelector("#code");
+        code.value = code;
         
         //code 클립보드 복사
-        var copyTarget = document.querySelector("#copyThis");
-        copyTarget.value = code;
-        copyTarget.select();
         document.execCommand("copy");
-        //document.body.removeChild(copyTarget);
         document.querySelector("#show").style = "color:blue";
       }
     </script>
     
     <p id="url">url: </p>
     <p id="query">query: </p>
-    <p id="code">code: </p>
-    <input id="copyThis" type="input" value="">
-    <p id="show" sytle="display:none;">Copied!!</p>
+    <div style="color:red;">code:</div>
+    <input id="code" width=100% type="input" value="" onclick="copyCode(this)">
+    <p id="show" style="display:none;">Copied!!</p>
   </body>
 </html>
