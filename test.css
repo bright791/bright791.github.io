@@ -1,9 +1,10 @@
 :root{
-  --size: 300px;
-  --size-half: 150px;
+  --size: 1000px;
+  --size-half: 500px;
 }
 body{
   margin: 0;
+  overscroll-behavior-y: none;
 }
 canvas{
   position: absolute;
@@ -17,10 +18,10 @@ canvas{
 canvas.puzzle{
   width: 0px;
   height: 0px;
-  border-top: 150px solid red;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 150px solid transparent;
+  border-top: var(--size-half) solid red;
+  border-left: var(--size-half) solid transparent;
+  border-right: var(--size-half) solid transparent;
+  border-bottom: var(--size-half) solid transparent;
   transition-duration: 2s;
   transition-timing-function: ease-out;
 }
@@ -36,7 +37,6 @@ canvas.puzzle{
 
 canvas:hover{
   cursor:grab;
-  cursor-size:
 }
 
 canvas:active{
