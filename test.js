@@ -3,7 +3,7 @@ window.onload = function(event){
   var alert = document.querySelector("div.console");
   
   pzl.addEventListener("touchmove", function(e){
-    document.querySelector("div.console").innerText = "x: " + e.pageX +"\ny: " + e.pageY;
+    document.querySelector("div.console").innerText = "x: " + e.changedTouches[0].pageX +"\ny: " + e.changedTouches[0].pageY;
     
   });
 
@@ -11,13 +11,13 @@ window.onload = function(event){
   var startX,endX,startY,endY;
   pzl.addEventListener("touchstart", function(e){
     start = new Date().getTime();
-    startX = e.pageX;
-    startY = e.pageY;
+    startX = e.changedTouches[0].pageX;
+    startY = e.changedTouches[0].pageY;
 
     window.addEventListener("touchend", function(e){
       end = new Date().getTime();
-      endX = e.pageX;
-      endY = e.pageY;
+      endX = e.changedTouches[0].pageX;
+      endY = e.changedTouches[0].pageY;
 
       var gapX = endX - startX;
       var gapY = endY - startY;
