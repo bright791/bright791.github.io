@@ -4,9 +4,9 @@
 }
 body{
   margin: 0;
-  overscroll-behavior-y: none;
+/*   overscroll-behavior-y: none; */
   height:100%;
-  min-height:100%;
+/*   min-height:100%; */
   overflow:hidden;
 }
 canvas{
