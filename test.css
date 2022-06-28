@@ -5,6 +5,7 @@
 body{
   margin: 0;
   overscroll-behavior-y: none;
+  overflow:hidden;
 }
 canvas{
   position: absolute;
