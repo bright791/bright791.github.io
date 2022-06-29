@@ -1,3 +1,4 @@
+alert("g");
 window.onload = function(event){
   var pzl = document.querySelector("canvas.puzzle");
   var alert = document.querySelector("div.console");
