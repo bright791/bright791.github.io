@@ -31,7 +31,8 @@
         document.querySelector("#query").append(query);
         
         document.querySelector("#code").value = code;
-        document.querySelector("#code").select().execCommand("copy");
+        document.querySelector("#code").select();
+        document.execCommand("copy");
         
       }
     </script>
