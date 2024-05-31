@@ -17,6 +17,8 @@
         document.querySelector("#code").select();
         document.execCommand("copy");
         document.querySelector("#show").style = "color:blue";
+
+        window.close();
       }
       
       window.onload = function(){
@@ -32,7 +34,6 @@
         
         document.querySelector("#code").value = code;
         document.querySelector("#code").select();
-        document.execCommand("copy");
         
       }
     </script>
