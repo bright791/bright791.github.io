@@ -18,6 +18,7 @@
         document.execCommand("copy");
         document.querySelector("#show").style = "color:blue";
 
+        window.opener.postMessage(document.querySelector("#code").value, "*")
         window.close();
       }
       
@@ -34,7 +35,8 @@
         
         document.querySelector("#code").value = code;
         document.querySelector("#code").select();
-        
+
+        window.opener.postMessage(code.value, "*");
       }
     </script>
     
