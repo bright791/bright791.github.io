@@ -18,6 +18,7 @@
         document.execCommand("copy");
         document.querySelector("#show").style = "color:blue";
 
+        opener.document.querySelector("#keyCode").value = document.querySelector("#code").value;
         window.close();
       }
       
