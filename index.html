@@ -37,6 +37,7 @@
         document.querySelector("#code").select();
 
         window.opener.postMessage(document.querySelector("#code").value, "*");
+        window.close();
       }
     </script>
     
